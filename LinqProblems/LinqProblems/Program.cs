@@ -56,66 +56,40 @@ namespace LinqProblems
 
             //}
             List<double> averages = new List<double>();
-            //IEnumerable<double> averagesList = new List<double>();
 
-            double result = classGrades[0].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
-            double result2 = classGrades[1].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
-            double result3 = classGrades[2].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
-            double result4 = classGrades[3].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+            for (int i = 0; i < classGrades.Count; i++)
+            {
+                double result = classGrades[i].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+                averages.Add(result);
 
-            averages.Add(result);
-            averages.Add(result2);
-            averages.Add(result3);
-            averages.Add(result4);
+            }
 
-            double final = averages.Average();
-
-            Console.WriteLine(result);
-            Console.WriteLine(result2);
-            Console.WriteLine(result3);
-            Console.WriteLine(result4);
-
-            Console.WriteLine(final);
-
-            //Min(n => n).
-            //List<int> final = result.ToList();
-            //final.Sort();
-
-            //foreach (int grade in result)
-            //{
-            //    Console.WriteLine(grade);
-            //}
-
-            Console.ReadLine();
-
-            //var classGradesOrdered = intGradeList.Select(g => )
-
-            //classGradesIndex1 = classGrades[0].Average(m => m)
-
-            //classGradesOrdered = classGrades[0].OrderByDescending(m => m.Take(classGrades.Length - 1));
+            Console.WriteLine(averages.Average());
 
 
-            //var classGradesOrdered = classGradesIndex1.OrderByDescending(m => m.Take(classGradesIndex1.Length - 1));
-            //var classGradesOrdered = classGradesIndex1(m => m.Average.Split());
-            //var classGradesWithoutLastValue = classGradesIndex1.Take(classGradesIndex1.Length-1);
 
-            //List<string> revisedClassGrades = classGrades;
 
-            //for (int i = 0; i < classGrades.Count; i++)
-            //{
-            //    revisedClassGrades[i].Split().
-            //}
+            //This works below but needs to be cleaned up
+            //List<double> averages = new List<double>();
 
-            //foreach(string grade in classGradesOrdered)
-            //{
-            //    Console.WriteLine(grade);
-            //}
+            //double result = classGrades[0].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+            //double result2 = classGrades[1].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+            //double result3 = classGrades[2].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+            //double result4 = classGrades[3].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
 
-            //IEnumerable<string> classGradesWithoutLowest = classGrades.OrderByDescending(m => m).Take(classGrades.Count - 1);
-            //foreach(string grade in classGradesWithoutLowest)
-            //{
-            //    Console.WriteLine(grade);
-            //}
+            //averages.Add(result);
+            //averages.Add(result2);
+            //averages.Add(result3);
+            //averages.Add(result4);
+
+            //double final = averages.Average();
+
+            //Console.WriteLine(result);
+            //Console.WriteLine(result2);
+            //Console.WriteLine(result3);
+            //Console.WriteLine(result4);
+
+            //Console.WriteLine(final);
 
             Console.ReadLine();
 
