@@ -49,18 +49,46 @@ namespace LinqProblems
                 "98,100,66,74,55"
             };
 
-            //var classGradesIndex1 = classGrades[0].Split().OrderByDescending(m => m.Take(classGrades.Count - 1)).ToList();
+            //IEnumerable<double> result = new List<double>();
+            //for (int i = 0; i < classGrades.Count; i++)
+            //{
+            //    result = classGrades[i].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Average(n => n);
 
-            //var newClassGrades = classGrades[0].
-            IEnumerable<int> newClassGrades = classGrades[0].Split(',').Select(n => Convert.ToInt32(n));
-            //IEnumerable<int> newClassGrades = classGrades[0].Split(',');
-            
-            foreach (int grade in newClassGrades)
-            {
-                Console.WriteLine(grade);
-            }
+            //}
+            List<double> averages = new List<double>();
+            //IEnumerable<double> averagesList = new List<double>();
 
+            double result = classGrades[0].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+            double result2 = classGrades[1].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+            double result3 = classGrades[2].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
+            double result4 = classGrades[3].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
 
+            averages.Add(result);
+            averages.Add(result2);
+            averages.Add(result3);
+            averages.Add(result4);
+
+            double final = averages.Average();
+
+            Console.WriteLine(result);
+            Console.WriteLine(result2);
+            Console.WriteLine(result3);
+            Console.WriteLine(result4);
+
+            Console.WriteLine(final);
+
+            //Min(n => n).
+            //List<int> final = result.ToList();
+            //final.Sort();
+
+            //foreach (int grade in result)
+            //{
+            //    Console.WriteLine(grade);
+            //}
+
+            Console.ReadLine();
+
+            //var classGradesOrdered = intGradeList.Select(g => )
 
             //classGradesIndex1 = classGrades[0].Average(m => m)
 
