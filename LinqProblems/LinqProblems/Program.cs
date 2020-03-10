@@ -34,11 +34,6 @@ namespace LinqProblems
             Console.ReadLine();
 
 
-
-
-
-
-
             //Problem 3
             Console.WriteLine("Problem 3");
             List<string> classGrades = new List<string>()
@@ -49,27 +44,15 @@ namespace LinqProblems
                 "98,100,66,74,55"
             };
 
-            //IEnumerable<double> result = new List<double>();
-            //for (int i = 0; i < classGrades.Count; i++)
-            //{
-            //    result = classGrades[i].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Average(n => n);
 
-            //}
             List<double> averages = new List<double>();
-
             for (int i = 0; i < classGrades.Count; i++)
             {
-                double result = classGrades[i].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
-                averages.Add(result);
-
+                averages.Add(classGrades[i].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average());
             }
-
             Console.WriteLine(averages.Average());
 
-
-
-
-            //This works below but needs to be cleaned up
+            //Breakdown below
             //List<double> averages = new List<double>();
 
             //double result = classGrades[0].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).Take(classGrades.Count).Select(n => n).Average();
