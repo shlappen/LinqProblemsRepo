@@ -59,14 +59,6 @@ namespace LinqProblems
             Console.WriteLine(averages.Average());
 
 
-
-
-
-
-
-
-
-            //Breakdown below
             //List<double> averages = new List<double>();
 
             //double result = classGrades[0].Split(',').Select(n => Convert.ToDouble(n)).OrderByDescending(n => n).ToList().Take(classGrades[0].Split(',').Length - 1).Average();
@@ -89,7 +81,19 @@ namespace LinqProblems
 
             Console.ReadLine();
 
-            
+            Console.WriteLine("Problem 4");
+
+            string newWord = "Terrill";
+            string result = "";
+
+
+            Console.WriteLine(result);
+
+
+
+
+            Console.ReadLine();
+
 
 
 
